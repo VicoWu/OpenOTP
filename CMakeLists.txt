@@ -2,6 +2,9 @@ cmake_minimum_required (VERSION 2.6)
 set_property (GLOBAL PROPERTY USE_FOLDERS ON)
 project (OOTP)
 
+include (kde-cmake-scripts/MacroEnsureOutOfSourceBuild.cmake)
+macro_ensure_out_of_source_build("${PROJECT_NAME} requires an out-of-source build. Please make the 'build' folder, and build ${PROJECT_NAME} from inside of it. Also make sure to delete CMakeCache.txt before you do.")
+
 if (WIN32)
 	add_definitions (-D_WIN32_WINDOWS)
 endif()
