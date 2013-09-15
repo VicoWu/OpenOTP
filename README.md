@@ -105,7 +105,9 @@ We use CMAKE to handle cross-platform compiling.
 
 On a linux system, build for development with:  
 
-    cmake -DCMAKE_BUILD_TYPE=Debug && make
+    mkdir build
+    cd build
+    cmake .. -DCMAKE_BUILD_TYPE=Debug && make
 
 On other systems, make sure DCMAKE_BUILD_TYPE is included with your CMAKE flags.  
 This compiles in debug logging and adds debug flags to your compiler.
